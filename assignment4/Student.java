@@ -26,8 +26,37 @@ public class Student
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+
+
+
+
+	public int hashCode()
+	{
+		int hash=rollno.hashCode();
+		return hash;
+	}
+	public boolean equals(Object obj)
+	{
+		if(this==obj)
+		{
+			return true;
+		}
+		if (!(obj instanceof Student)) {
+			return false;
+		}
+		Student other = (Student) obj;
+		boolean isequal=this.rollno.equals(other.rollno);
+		return isequal;
+	}
+
+
+
+
+
+
 	
-	    @Override
+	  /*  @Override
 	public int hashCode() {
 		return Objects.hash(age, rollno);
 	}
@@ -41,6 +70,6 @@ public class Student
 		}
 		Student other = (Student) obj;
 		return age == other.age && Objects.equals(rollno, other.rollno);
-	}
+	}*/
 
 }

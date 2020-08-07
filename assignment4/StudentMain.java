@@ -23,17 +23,15 @@ public class StudentMain {
 		store.add(student3);
 		store.add(student4);
 		store.add(student5);
-		List<Student> studentage = new ArrayList<Student>(store);
-		display(studentage);
+		List<Student>list=convertList(store);	
 	}
-	
-	private void display(List<Student> studentage) {
-		for (Student stobject : studentage) {
-			int age=stobject.getAge();
-			if(age>21)
-			{
-			System.out.println(age);
-		}
+	public void List<Student>convertList(set<Student>set)
+	{
+		List<Student>list=new ArrayList<>();
+for(Student student:set)
+{
+if(Student.getAge()>21)
+{
+list.add(student);
 	}
-}
 }
