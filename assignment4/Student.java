@@ -27,20 +27,20 @@ public class Student
 		this.age = age;
 	}
 	
-	public boolean equals(Object Arg)
-	{
-		if(this==Arg)
-		{
+	    @Override
+	public int hashCode() {
+		return Objects.hash(age, rollno);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
 			return true;
 		}
-		if(Arg==null || !(Arg instanceof Student))
-		{
+		if (!(obj instanceof Student)) {
 			return false;
 		}
-		Student	that=(Student)Arg;
-		boolean isequal=this.age==that.age;
-		return isequal;
+		Student other = (Student) obj;
+		return age == other.age && Objects.equals(rollno, other.rollno);
 	}
-
 
 }
