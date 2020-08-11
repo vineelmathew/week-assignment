@@ -4,9 +4,14 @@ import org.dxctraining.dao.GuestDaoImplem;
 import org.dxctraining.dao.IguestDao;
 import org.dxctraining.entities.Guest;
 import org.dxctraining.exceptions.NullException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+@Service
 public class GuestServiceImplementation implements IguestService{
+@Autowired
     private IguestDao guestDao=new GuestDaoImplem();
     @Override
     public void register(Guest guest) {
