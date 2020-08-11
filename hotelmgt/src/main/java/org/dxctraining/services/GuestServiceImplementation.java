@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class GuestServiceImplementation implements IguestService{
 @Autowired
-    private IguestDao guestDao=new GuestDaoImplem();
+    private IguestDao guestDao;
     @Override
     public void register(Guest guest) {
         guestDao.register(guest);
